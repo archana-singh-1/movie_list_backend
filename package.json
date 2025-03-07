@@ -1,0 +1,27 @@
+{
+  "name": "movie_list_backend",
+  "version": "1.0.0",
+  "description": "movie list project",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/archana-singh-1/movie_list_backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/archana-singh-1/movie_list_backend/issues"
+  },
+  "homepage": "https://github.com/archana-singh-1/movie_list_backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dot": "^1.1.3",
+    "dotenv": "^16.4.7",
+    "express.js": "^1.0.0",
+    "routing": "^0.0.2"
+  }
+}
