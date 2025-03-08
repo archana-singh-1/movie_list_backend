@@ -52,6 +52,27 @@ route.post("/post",async (req,resp)=>{
 
 })
 
+route.put("/update/:id", async (req, resp) => {
+    try {
+        const { title, year, genre, rating, poster } = req.body;
+        const updatedMovie = await movie.findByIdAndUpdate(
+            req.params.id,  
+            { title, year, genre, rating, poster },
+            { new: true } 
+        );
+
+        if (!updatedMovie) {
+            return resp.status(404).json({ mess: "Movie not found" });
+        }
+
+        resp.json({ message: "Movie updated successfully", movie: updatedMovie });
+
+    } catch (error) {
+        resp.status(500).json({ error: "Failed to update movie", details: error.message });
+    }
+});
+
+
 export default route;
 
 
