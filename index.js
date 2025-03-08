@@ -20,10 +20,7 @@ mongoose.connect(mongoDbUrl,{
 .then(() => console.log("MongoDB Connected"))
 .catch(err => console.log(err,"err"));
 
-app.get("/",(res,req)=>{
-    console.log("done");
-    res.json({message:"done"})
-})
+
 app.use("/api",route)
 
 app.listen(PORT,function(){
