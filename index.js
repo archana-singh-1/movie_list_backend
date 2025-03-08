@@ -20,7 +20,6 @@ mongoose.connect(mongoDbUrl,{
 .then(() => console.log("MongoDB Connected"))
 .catch(err => console.log(err,"err"));
 
-
 app.use("/api",route)
 
 app.listen(PORT,function(){
