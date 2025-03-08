@@ -18,7 +18,7 @@ mongoose.connect(mongoDbUrl,{
     serverSelectionTimeoutMS: 5000
 })
 .then(() => console.log("MongoDB Connected"))
-.catch(err => console.log(err));
+.catch(err => console.log(err,"err"));
 
 app.get("/",(res,req)=>{
     console.log("done");

@@ -4,12 +4,22 @@ import movie from '../model/movieSchema.js'
 
 const route=router()
 
-route.get("/movieList",async (req,resp)=>{
-    const movies=await movie.find()
-    resp.json(movies)
+// route.get("/movieList",async (req,resp)=>{
+    // const movies=await movie.find()
+//     resp.json(movies)
     
-})
+// })
 
+route.get("/movieList", async (req, res) => {
+    try {
+        const movies = await movie.find();
+        console.log(" Movies Fetched Successfully:", movies);
+        res.json(movies);
+    } catch (error) {
+        console.error(" Error in /movieList API:", error.message);
+        res.status(500).json({ error: "Internal Server Error", details: error.message });
+    }
+});
 route.get("/getByid/:id",async (req,resp)=>{
     try{
         const movieByid= await movie.findById(req.params.id)
