@@ -4,11 +4,6 @@ import movie from '../model/movieSchema.js'
 
 const route=router()
 
-// route.get("/movieList",async (req,resp)=>{
-    // const movies=await movie.find()
-//     resp.json(movies)
-    
-// })
 
 route.get("/movieList", async (req, res) => {
     try {
